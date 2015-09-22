@@ -35,8 +35,8 @@ RUN cd ~/gocode/src; \
     echo '  http.HandleFunc("/", handler)' >> app.go; \
     echo '  http.ListenAndServe(":8080", nil)' >> app.go; \
     echo '}' >> app.go; \
-    go install
+    go build app.go
 
 EXPOSE 8080
 
-CMD ["app"]
+CMD ["/root/gocode/src/app/app"]
