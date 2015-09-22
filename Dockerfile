@@ -8,7 +8,7 @@ RUN yum update; yum -y install emacs; yum -y install wget; yum -y install zip; y
 # Install go 1.5.1
 RUN wget https://storage.googleapis.com/golang/go1.5.1.linux-amd64.tar.gz; \
     tar -C /usr/local -xzf go1.5.1.linux-amd64.tar.gz; \
-    mkdir ~/gocode
+    mkdir ~/gocode; \
     echo 'export GOPATH=$HOME/gocode' >> ~/.bashrc; \
     echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc; \
     mkdir -p $GOPATH/src/github.com/user; \
