@@ -11,8 +11,8 @@ RUN wget https://storage.googleapis.com/golang/go1.5.1.linux-amd64.tar.gz; \
     rm go1.5.1.linux-amd64.tar.gz; \
     mkdir ~/gocode; \
     echo 'export GOPATH=$HOME/gocode' >> ~/.bashrc; \
-    echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc; \
-    mkdir -p /root/gocode/src/github.com/user; \
+    echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc; source ~/.bashrc; \
+    mkdir -p $GOPATH/src/github.com/user; \
     ln -s /usr/local/go/bin/go /bin/go; \
     ln -s /usr/local/go/bin/godoc /bin/godoc; \
     ln -s /usr/local/go/bin/gofmt /bin/gofmt
